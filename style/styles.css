@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #d9f0fc;
+    
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.containerHeroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerHeroBanner img {
+    width: 50rem;
+    height: auto;
+
+}
+
+.hero_title {
+    font-size: 1.5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #50918c;
+    margin-right: 5vw;
+    margin-bottom: 4vw;
+    margin-top: 5vw;
+    justify-content: center;
+}
+
+h1{
+    font-size: 2.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #50918c;
+    margin-right: 5rem;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.wrapperContainer {
+    padding-top: 0;
+}
+
+.wrapperContainer_fixed {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    background-color: #2A2A5A;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.header_nav li {
+    display: inline-block;
+}
+
+.header_nav {
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+.header_nav a {
+    color: #fff;
+    padding: .75rem 1.15em;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.header_nav a:hover {
+    background-color: rgb(0, 132, 255);
+}
+
+.header_nav ul {
+    list-style: none;
+    display: flex;
+    gap: .6rem;
+}
+
+.wrapperContainerHero {
+    height: 60rem;
+    justify-content: center;
+}
+
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/*Se for preciso vai quebrar a linha*/
+    gap: 2rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18rem;
+}
+
+.skill img {
+    width: 15vh;
+    height: auto;
+    object-fit: contain;/*Imagem sem distorcer*/
+    transition: transform 0.3s ease; /*Animação quando passar o mouse*/
+}
+
+.skill img:hover {
+    transform: scale(1.5);
+}
+
+.skill p {
+    margin-top: 1vh;
+    font-size: 1.6rem;
+    color: #2A2A5A;
+}
+
+.img_project {
+    max-width: 100%;
+    display: block;
+}
+
+.projetoscontainer {
+    width: 100%;
+    height: auto;
+    margin: center;
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5em;
+    background-color: #d5d5f0;
+    padding: .5em;
+    box-shadow: 0 0 14px 2px rgba(0,0,0, .8);
+
+}
+
+.projetoscontainer .image {
+    flex-basis: calc(25% - .5em);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image a {
+    text-decoration: none; 
+    font-size: 2rem;
+}
+
+
+.projetoscontainer p {  
+    background-color: rgba(0,0,0, .8);
+    height: 2rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    letter-spacing: 2px;
+    font-size: .75em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: .5;
+    transform: translateY(100%);
+    transition: all .2s ease-in-out;
+}
+
+.image:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.image .img_project{
+    transform: scale(1);
+    transition: transform .5 ease-in-out;
+
+}
+
+.image:hover .img_project{
+    transform: scale(1.2) /*rotate(2deg)*/;
+}
+
+.image::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 0;
+    opacity: .2;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+.image:hover::after{
+    opacity: 0;
+}
+
+.contact-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-container a button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 80px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container a button:hover {
+    background-color: #3a913e;
+}
+
+
+@media (max-width: 768px) {
+
+    /* Ajustes gerais */
+    html {
+        font-size: 50%; /* Reduz o tamanho da fonte em dispositivos móveis */
+    }
+
+    h1 {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+        margin-right: 0; /* Remove a margem lateral */
+        margin-bottom: 2rem; /* Ajusta a margem inferior */
+    }
+
+    p {
+        font-size: 1.4rem; /* Reduz o tamanho das fontes dos parágrafos */
+    }
+
+    /* Ajustes do banner hero */
+    .containerHeroBanner {
+        flex-direction: column; /* Empilha os elementos em coluna */
+        align-items: center;
+        text-align: center;
+        padding: 2rem 0; /* Adiciona espaço entre os itens */
+    }
+
+    .containerHeroBanner img {
+        width: 80%; /* Reduz o tamanho da imagem para caber melhor na tela */
+        margin-bottom: 2rem; /* Adiciona espaçamento abaixo da imagem */
+    }
+
+    .hero_title {
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+        text-align: center;
+        
+    }
+
+    /* Ajustes de navegação */
+    .header {
+        flex-direction: column; /* Empilha o menu */
+        padding: 1rem 0;
+    }
+
+    .header_nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .header_nav a {
+        font-size: 2rem; /* Reduz o tamanho do menu */
+        padding: .5rem 1rem;
+    }
+
+    .skills-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 2rem; 
+        margin-top: 3rem;
+        margin-top: 2rem;
+    }
+
+    .skill {
+        width: 80%; 
+        max-width: 300px;
+    }
+    
+    .skil {
+        margin-top: 40rem;
+
+    }
+
+    .skill img {
+        width: 30vw; 
+    }
+
+    /* Ajustes nos projetos */
+    .projetoscontainer {
+        flex-direction: column; /* Empilha os projetos verticalmente */
+        padding: 1rem;
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .projetoscontainer .image {
+        width: 90%; /* Cada projeto ocupa quase toda a largura */
+        margin-bottom: 1rem;
+    }
+
+    /* Ajustes nos botões de contato */
+    .contact-container {
+        flex-direction: column; /* Empilha os botões de contato */
+        gap: 1rem; /* Ajusta o espaçamento */
+        align-items: center;
+    }
+
+    .contact-container a button {
+        padding: 20px 40px; /* Reduz o padding dos botões */
+        font-size: 1.6rem; /* Reduz o tamanho da fonte */
+        width: 80%; /* Deixa os botões com largura maior no mobile */
+    }
+}
+
